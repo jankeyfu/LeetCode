@@ -1,0 +1,2 @@
+- 有效提升字符串拼接方式：请使用bytes.Buffer
+- for `i,v:=range arr` 中使用变量v比使用arr[i]效率高
