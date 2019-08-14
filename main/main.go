@@ -45,5 +45,12 @@ func main() {
 	// fmt.Println(toLowerCase("HeLlo"))
 	// fmt.Println([]byte("hello"))
 	// fmt.Println([]byte("Hello"))
-	fmt.Println(uniqueMorseRepresentations([]string{"gin", "zen", "gig", "msg"}))
+	// fmt.Println(uniqueMorseRepresentations([]string{"gin", "zen", "gig", "msg"}))
+
+	// fmt.Println(convert("AB", 2))
+	// fmt.Println(convert("LEETCODEISHIRING", 3))
+
+	fmt.Println(compress([]byte("aabbccc")))
+	fmt.Println(compress([]byte("abbbbbbbbbbbb")))
+	fmt.Println(compress([]byte("abc")))
 }
