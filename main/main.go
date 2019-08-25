@@ -50,7 +50,12 @@ func main() {
 	// fmt.Println(convert("AB", 2))
 	// fmt.Println(convert("LEETCODEISHIRING", 3))
 
-	fmt.Println(compress([]byte("aabbccc")))
-	fmt.Println(compress([]byte("abbbbbbbbbbbb")))
-	fmt.Println(compress([]byte("abc")))
+	// fmt.Println(compress([]byte("aabbccc")))
+	// fmt.Println(compress([]byte("abbbbbbbbbbbb")))
+	// fmt.Println(compress([]byte("abc")))
+
+	// fmt.Println(letterCombinations("234"))
+
+	// fmt.Println(restoreIpAddresses("25525511135"))
+	fmt.Println(restoreIpAddresses("010010"))
 }
