@@ -57,5 +57,36 @@ func main() {
 	// fmt.Println(letterCombinations("234"))
 
 	// fmt.Println(restoreIpAddresses("25525511135"))
-	fmt.Println(restoreIpAddresses("010010"))
+	// fmt.Println(restoreIpAddresses("010010"))
+
+	// cache := Constructor(1)
+	// cache.Put(2, 1)
+	// fmt.Println(cache.string())
+
+	// fmt.Println(cache.Get(2))
+	// fmt.Println(cache.string())
+
+	// cache.Put(3, 2)
+	// fmt.Println(cache.string())
+
+	// fmt.Println(cache.Get(2))
+	// fmt.Println(cache.string())
+
+	// fmt.Println(cache.Get(3))
+	// fmt.Println(cache.string())
+
+	// fmt.Println(cache.Get(1)) // 返回  1
+	// cache.Put(3, 3)           // 该操作会使得密钥 2 作废
+	// fmt.Println(cache.Get(2)) // 返回 -1 (未找到)
+	// cache.Put(4, 4)           // 该操作会使得密钥 1 作废
+	// fmt.Println(cache.Get(1)) // 返回 -1 (未找到)
+	// fmt.Println(cache.Get(3)) // 返回  3
+	// fmt.Println(cache.Get(4)) // 返回  4
+
+	// fmt.Println(twoSum([]int{2, 7, 11, 15}, 9))
+
+	// fmt.Println(climbStairs(10))
+	// fmt.Println(maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
+	fmt.Println(maxProfit([]int{7, 1, 5, 3, 6, 4}))
+	fmt.Println(maxProfit([]int{7, 6, 4, 3, 1}))
 }
