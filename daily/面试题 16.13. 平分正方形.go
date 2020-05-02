@@ -1,5 +1,7 @@
 package daily
 
+import "fmt"
+
 func cutSquares(square1 []int, square2 []int) []float64 {
 	sqmidx1 := float64(square1[0]) + float64(square1[2])/2
 	sqmidy1 := float64(square1[1]) + float64(square1[2])/2
@@ -11,7 +13,8 @@ func cutSquares(square1 []int, square2 []int) []float64 {
 	} else {
 		rate = [2]int{int(2 * (sqmidx2 - sqmidx1)), int(2 * (sqmidy2 - sqmidy1))}
 	}
-	
+	fmt.Println(rate)
+	return nil
 }
 
 func max(a, b int) int {

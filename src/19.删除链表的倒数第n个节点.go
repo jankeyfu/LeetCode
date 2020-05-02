@@ -15,7 +15,26 @@ package src
  * }
  */
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
-	firstP, secondP := head, head
+	ret := &ListNode{}
+	ret.Next = head
+	l, r := ret, ret
+	for i := 0; i < n; i++ {
+		r = r.Next
+	}
+	// fmt.Println(l, r)
+	for r.Next != nil {
+		r = r.Next
+		l = l.Next
+	}
+	// fmt.Println(l, r)
+	l.Next = l.Next.Next
+	return ret.Next
+}
+
+// @lc code=end
+
+/**
+firstP, secondP := head, head
 	first, second := 0, 0
 
 	for firstP != nil {
@@ -32,6 +51,4 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 		secondP.Next = secondP.Next.Next
 	}
 	return head
-}
-
-// @lc code=end
+*/

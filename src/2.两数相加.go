@@ -15,7 +15,60 @@ package src
  * }
  */
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var ret, root *ListNode
+	cur := &ListNode{}
+	head := cur
+	step := 0
+	for l1 != nil && l2 != nil {
+		v := l1.Val + l2.Val + step
+		cur.Next = &ListNode{
+			Val: v % 10,
+		}
+		step = v / 10
+		cur = cur.Next
+		l1 = l1.Next
+		l2 = l2.Next
+	}
+	for l1 != nil {
+		v := l1.Val + step
+		step = v / 10
+		if v < 10 {
+			l1.Val = v
+			cur.Next = l1
+			break
+		}
+		cur.Next = &ListNode{
+			Val: v % 10,
+		}
+
+		l1 = l1.Next
+		cur = cur.Next
+	}
+	for l2 != nil {
+		v := l2.Val + step
+		step = v / 10
+		if v < 10 {
+			l2.Val = v
+			cur.Next = l2
+			break
+		}
+		cur.Next = &ListNode{
+			Val: v % 10,
+		}
+		l2 = l2.Next
+		cur = cur.Next
+	}
+	if step != 0 {
+		cur.Next = &ListNode{
+			Val: step,
+		}
+	}
+	return head.Next
+}
+
+// @lc code=end
+
+/*
+var ret, root *ListNode
 
 	step := 0
 	for l1 != nil && l2 != nil {
@@ -74,6 +127,4 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		}
 	}
 	return root
-}
-
-// @lc code=end
+*/

@@ -6,10 +6,33 @@ import (
 
 // Run ...
 func Run() {
-	Stack()
+	// Stack()
 	// Other()
 	// graph()
 	// OneForDay()
+	// linkedList()
+	hash()
+	// design()
+}
+
+func design() {
+	cache := Constructor2(2)
+	cache.Put(1, 1)
+	cache.Put(2, 2)
+	fmt.Println(cache.Get(1))
+	cache.Put(3, 3)
+	fmt.Println(cache.Get(2)) // 返回 -1 (未找到)
+	cache.Put(4, 4)           // 该操作会使得密钥 1 作废
+	fmt.Println(cache.Get(1)) // 返回 -1 (未找到)
+	fmt.Println(cache.Get(3)) // 返回  3
+	fmt.Println(cache.Get(4))
+}
+
+func hash() {
+	fmt.Println(lengthOfLongestSubstring("abcabcbb"))
+	fmt.Println(lengthOfLongestSubstring("bbbbb"))
+	fmt.Println(lengthOfLongestSubstring("pwwkew"))
+	fmt.Println(lengthOfLongestSubstring("sfsjdfajsdfla"))
 }
 
 // Stack ...
@@ -39,16 +62,30 @@ func Stack() {
 	// fmt.Println(numberOfSubarrays([]int{2, 2, 2, 1, 2, 2, 1, 2, 2, 2}, 2))
 	// fmt.Println(permute([]int{1, 2, 3}))
 	// fmt.Println(permute([]int{1, 2, 3, 4}))
-	fmt.Println(permute([]int{5, 4, 2, 6}))
+	// fmt.Println(permute([]int{5, 4, 2, 6}))
 }
 func graph() {
 	fmt.Println(findJudge(3, [][]int{[]int{1, 3}, []int{2, 3}, []int{3, 1}}))
 }
 
+func linkedList() {
+	// lists := []*ListNode{
+	// 	CreateLinkedList([]int{1, 4, 5}),
+	// 	CreateLinkedList([]int{1, 3, 4}),
+	// 	CreateLinkedList([]int{2, 6})}
+
+	// fmt.Println(WalkLinkedList(mergeKLists(lists)))
+	list := CreateLinkedList([]int{1, 2, 3, 4, 5})
+	fmt.Println(WalkLinkedList(reverseKGroup(list, 3)))
+}
+
 func OneForDay() {
-	fmt.Println(superEggDrop(1, 2))
-	fmt.Println(superEggDrop(2, 6))
-	fmt.Println(superEggDrop(3, 14))
+	// fmt.Println(superEggDrop(1, 2))
+	// fmt.Println(superEggDrop(2, 6))
+	// fmt.Println(superEggDrop(3, 14))
+	// fmt.Println(findInMountainArray(1, &MountainArray{Arr: []int{0, 5, 3, 1}}))
+	// fmt.Println(isHappy(19))
+	fmt.Println(isHappy(11))
 }
 
 // Other ...
